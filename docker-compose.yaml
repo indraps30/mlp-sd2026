@@ -1,19 +1,39 @@
 name: smoke-detector
 services:
-  ui:
+  api:
     build:          # "where is the Dockerfile location?"
       context: .    # in root directory
-      dockerfile: ./docker/ui/Dockerfile
-    image: indraps30/ui_sd  # Docker_Hub_Username/Docker_Image_Name
-    depends_on:
-      - api         # UI service only run after API service.
+      dockerfile: docker/api/Dockerfile
+    image: indraps/api_sd     # Docker_Hub_Username/Docker_Image_Name
+    container_name: backend_sd
+    restart: unless-stopped   # if the container crashes, Docker should restart it
     ports:
-      - "8501:8501" # Host:Container
+      - "8080:8080"           # Host:Container
+    
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8080"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+
+  ui:
+    build:
+      context: .
+      dockerfile: docker/ui/Dockerfile
+    image: indraps30/ui_sd
+    container_name: frontend_sd
+    restart: unless-stopped
+    depends_on:
+      api:         # UI service only run after API service.
+        condition: service_healthy
+    ports:
+      - "8501:8501"
 
   api:
     build:
       context: .
       dockerfile: ./docker/api/Dockerfile
     image: indraps30/api_sd
+    container_name: backend_sd
     ports:
       - "8080:8080"
