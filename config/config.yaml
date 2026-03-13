@@ -1,0 +1,93 @@
+columns_datetime:
+- utc
+columns_float:
+- temperature
+- humidity_pct
+- pressure
+- pm10
+- pm25
+- nc05
+- nc10
+- nc25
+columns_int:
+- tvoc
+- co2
+- raw_h2
+- raw_ethanol
+- fire_alarm
+features:
+- temperature
+- humidity_pct
+- pressure
+- pm10
+- tvoc
+- co2
+- raw_h2
+- raw_ethanol
+label: fire_alarm
+path_clean_test:
+- data/processed/X_test_clean.pkl
+- data/processed/y_test_clean.pkl
+path_clean_train:
+- data/processed/X_train_clean.pkl
+- data/processed/y_train_clean.pkl
+path_clean_valid:
+- data/processed/X_valid_clean.pkl
+- data/processed/y_valid_clean.pkl
+path_data_raw: data/raw/smoke_detection_iot.csv
+path_data_test:
+- data/interim/X_test.pkl
+- data/interim/y_test.pkl
+path_data_train:
+- data/interim/X_train.pkl
+- data/interim/y_train.pkl
+path_data_valid:
+- data/interim/X_valid.pkl
+- data/interim/y_valid.pkl
+path_data_validated: data/interim/validated_data.pkl
+path_fitted_scaler: models/scaler.pkl
+path_production_model: models/best_model.pkl
+path_training_log: logs/training_log.json
+random_state: 123
+range_co2:
+- 400
+- 60000
+range_fire_alarm:
+- 0
+- 1
+range_humidity_pct:
+- 10.74
+- 75.2
+range_nc05:
+- 0
+- 65535
+range_nc10:
+- 0
+- 65535
+range_nc25:
+- 0
+- 65535
+range_pm10:
+- 0.0
+- 14333.69
+range_pm25:
+- 0
+- 65535
+range_pressure:
+- 930.852
+- 939.861
+range_raw_ethanol:
+- 15317
+- 21410
+range_raw_h2:
+- 10668
+- 13803
+range_temperature:
+- -22.01
+- 59.93
+range_tvoc:
+- 0
+- 60000
+range_utc:
+- 8/6/2022
+- 14/6/2022

@@ -1,0 +1,14 @@
+fastapi[standard]
+imblearn
+joblib
+jupyter
+matplotlib
+mkdocs
+numpy
+pandas
+pytest
+pyyaml
+seaborn
+scikit-learn
+streamlit
+uvicorn

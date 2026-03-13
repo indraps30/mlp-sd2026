@@ -1,0 +1,7 @@
+.venv_sd/
+**/.ipynb_checkpoints/
+**/__pycache__
+data/interim/
+data/processed/
+docs/site/
+logs/

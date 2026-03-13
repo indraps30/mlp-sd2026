@@ -1,0 +1,6 @@
+site_name: SD Docs
+nav:
+  - Home: index.md
+  - About: about.md
+  - Contact: contact.md
+theme: readthedocs
