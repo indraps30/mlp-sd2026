@@ -1,0 +1,30 @@
+# Python cache
+**/__pycache__
+**/.pytest_cache/
+*.pyc
+*.pyo
+*.pyd
+
+# Virtual environments
+.venv_sd
+
+# Notebook artifacts
+**/.ipynb_checkpoints/
+
+# Development folders
+docs/
+logs/
+notebooks/
+reports/
+
+# Git
+.git
+.gitignore
+
+# Large datasets
+data/interim/
+data/processed/
+
+# OS files
+.DS_Store
+Thumbs.db

@@ -1,15 +1,9 @@
 fastapi[standard]
 imblearn
 joblib
-jupyter
-matplotlib
-mkdocs
 numpy
 pandas
-pytest
 pyyaml
 requests
-seaborn
 scikit-learn
-streamlit
 uvicorn

@@ -1,0 +1,4 @@
+joblib
+pyyaml
+requests
+streamlit

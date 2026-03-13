@@ -107,7 +107,7 @@ with st.form(key = "data_form"):
 
         # Create a loading animation while predicting.
         with st.spinner("Sending data to prediction server..."):
-            res = requests.post("http://localhost:8080/predict", json=raw_data).json()
+            res = requests.post("http://api:8080/predict", json=raw_data).json()
 
         # Parse the prediction.
         if res["error_msg"] != "":

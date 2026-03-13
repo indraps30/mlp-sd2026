@@ -1,4 +1,5 @@
 .venv_sd/
+**/.pytest_cache/
 **/.ipynb_checkpoints/
 **/__pycache__
 data/interim/
