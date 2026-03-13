@@ -28,12 +28,3 @@ services:
         condition: service_healthy
     ports:
       - "8501:8501"
-
-  api:
-    build:
-      context: .
-      dockerfile: ./docker/api/Dockerfile
-    image: indraps30/api_sd
-    container_name: backend_sd
-    ports:
-      - "8080:8080"
